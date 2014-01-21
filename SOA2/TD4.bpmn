@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bonitaConnector="http://www.bonitasoft.org/studio/connector/definition/6.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di_1="http://www.omg.org/spec/DD/20100524/DI" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:model="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="BonitaSoft" exporterVersion="6.1.0" expressionLanguage="http://groovy.codehaus.org/" targetNamespace="http://bonitasoft.com/_lZxmYYLqEeOuRu4yeMlrTg">
+  <model:collaboration id="_lZxmYYLqEeOuRu4yeMlrTg">
+    <model:participant id="_XgLxoILwEeOuRu4yeMlrTg" name="TravelParadise" processRef="_leixoILqEeOuRu4yeMlrTg"/>
+    <model:participant id="_lgy0YILqEeOuRu4yeMlrTg" name="Employee actor">
+      <model:documentation>This is an example of actor that is mapped to any ACME users</model:documentation>
+    </model:participant>
+  </model:collaboration>
+  <model:process id="_leixoILqEeOuRu4yeMlrTg" name="TravelParadise">
+    <model:ioSpecification id="_XgMYsYLwEeOuRu4yeMlrTg">
+      <model:inputSet id="_XgMYsoLwEeOuRu4yeMlrTg"/>
+      <model:outputSet id="_XgMYs4LwEeOuRu4yeMlrTg"/>
+    </model:ioSpecification>
+    <model:laneSet id="TravelParadise_laneSet">
+      <model:lane id="_lg3F0ILqEeOuRu4yeMlrTg" name="Employee lane">
+        <model:flowNodeRef>_lhG9cILqEeOuRu4yeMlrTg</model:flowNodeRef>
+        <model:flowNodeRef>_lhkQcILqEeOuRu4yeMlrTg</model:flowNodeRef>
+      </model:lane>
+    </model:laneSet>
+    <model:userTask id="_lhG9cILqEeOuRu4yeMlrTg" name="Step1"/>
+    <model:startEvent id="_lhkQcILqEeOuRu4yeMlrTg" name="Start1"/>
+    <model:sequenceFlow id="_lhxEwILqEeOuRu4yeMlrTg" name="" sourceRef="_lhkQcILqEeOuRu4yeMlrTg" targetRef="_lhG9cILqEeOuRu4yeMlrTg"/>
+  </model:process>
+  <di:BPMNDiagram name="TD4">
+    <di:BPMNPlane id="plane__lZxmYYLqEeOuRu4yeMlrTg" bpmnElement="_lZxmYYLqEeOuRu4yeMlrTg">
+      <di:BPMNShape id="_lf1yIILqEeOuRu4yeMlrTg" bpmnElement="_leixoILqEeOuRu4yeMlrTg" isHorizontal="true">
+        <dc:Bounds height="250.0" width="1126.0" x="30.0" y="30.0"/>
+        <di:BPMNLabel id="_XgMYsILwEeOuRu4yeMlrTg" labelStyle="_XgLxoYLwEeOuRu4yeMlrTg"/>
+      </di:BPMNShape>
+      <di:BPMNShape id="_lg47AILqEeOuRu4yeMlrTg" bpmnElement="_lg3F0ILqEeOuRu4yeMlrTg" isHorizontal="true">
+        <dc:Bounds height="250.0" width="1108.0" x="48.0" y="30.0"/>
+        <di:BPMNLabel id="_XgMYtILwEeOuRu4yeMlrTg" labelStyle="_XgLxoYLwEeOuRu4yeMlrTg"/>
+      </di:BPMNShape>
+      <di:BPMNShape id="_lhRVgILqEeOuRu4yeMlrTg" bpmnElement="_lhG9cILqEeOuRu4yeMlrTg">
+        <dc:Bounds height="50.0" width="100.0" x="208.0" y="85.0"/>
+        <di:BPMNLabel id="_XgMYtYLwEeOuRu4yeMlrTg" labelStyle="_XgLxoYLwEeOuRu4yeMlrTg"/>
+      </di:BPMNShape>
+      <di:BPMNShape id="_lhmFoILqEeOuRu4yeMlrTg" bpmnElement="_lhkQcILqEeOuRu4yeMlrTg">
+        <dc:Bounds height="30.0" width="30.0" x="108.0" y="95.0"/>
+        <di:BPMNLabel id="_XgM_wILwEeOuRu4yeMlrTg" labelStyle="_XgLxoYLwEeOuRu4yeMlrTg"/>
+      </di:BPMNShape>
+      <di:BPMNEdge id="_lh0IEILqEeOuRu4yeMlrTg" bpmnElement="_lhxEwILqEeOuRu4yeMlrTg">
+        <di_1:waypoint x="138.0" y="110.0"/>
+        <di_1:waypoint x="208.0" y="110.0"/>
+      </di:BPMNEdge>
+    </di:BPMNPlane>
+    <di:BPMNLabelStyle id="_XgLxoYLwEeOuRu4yeMlrTg">
+      <dc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name="Lucida Grande" size="9.0"/>
+    </di:BPMNLabelStyle>
+  </di:BPMNDiagram>
+</model:definitions>
