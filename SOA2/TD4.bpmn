@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bonitaConnector="http://www.bonitasoft.org/studio/connector/definition/6.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di_1="http://www.omg.org/spec/DD/20100524/DI" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:model="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="BonitaSoft" exporterVersion="6.1.0" expressionLanguage="http://groovy.codehaus.org/" targetNamespace="http://bonitasoft.com/_iKMEgYNkEeO3-tSenbhqWg">
   <model:collaboration id="_iKMEgYNkEeO3-tSenbhqWg">
-    <model:participant id="_zqbsgIOCEeO3-tSenbhqWg" name="Supplier" processRef="_iSiIMINkEeO3-tSenbhqWg"/>
-    <model:participant id="_zqcTkYOCEeO3-tSenbhqWg" name="Client" processRef="_iVi_8INkEeO3-tSenbhqWg"/>
-    <model:participant id="_zqcTloOCEeO3-tSenbhqWg" name="TravelParadise" processRef="_iV1T0INkEeO3-tSenbhqWg"/>
+    <model:participant id="_DE6OwIOJEeO3-tSenbhqWg" name="Supplier" processRef="_iSiIMINkEeO3-tSenbhqWg"/>
+    <model:participant id="_DE611IOJEeO3-tSenbhqWg" name="Client" processRef="_iVi_8INkEeO3-tSenbhqWg"/>
+    <model:participant id="_DE612YOJEeO3-tSenbhqWg" name="TravelParadise" processRef="_iV1T0INkEeO3-tSenbhqWg"/>
   </model:collaboration>
   <model:process id="_iSiIMINkEeO3-tSenbhqWg" name="Supplier">
-    <model:ioSpecification id="_zqbsg4OCEeO3-tSenbhqWg">
-      <model:inputSet id="_zqbshIOCEeO3-tSenbhqWg"/>
-      <model:outputSet id="_zqbshYOCEeO3-tSenbhqWg"/>
+    <model:ioSpecification id="_DE6Ow4OJEeO3-tSenbhqWg">
+      <model:inputSet id="_DE6OxIOJEeO3-tSenbhqWg"/>
+      <model:outputSet id="_DE6OxYOJEeO3-tSenbhqWg"/>
     </model:ioSpecification>
     <model:receiveTask id="_SVYtAIN6EeO3-tSenbhqWg" name="receive valid reservation"/>
-    <model:receiveTask id="_Vn0HEIN6EeO3-tSenbhqWg" name="receive invalid reservation"/>
+    <model:receiveTask id="_TPiVMIOHEeO3-tSenbhqWg" name="receive order"/>
+    <model:sendTask id="_ukWxQIOHEeO3-tSenbhqWg" name="confirm order"/>
+    <model:sequenceFlow id="_vP0wIIOHEeO3-tSenbhqWg" name="" sourceRef="_TPiVMIOHEeO3-tSenbhqWg" targetRef="_ukWxQIOHEeO3-tSenbhqWg">
+      <model:conditionExpression xsi:type="model:tFormalExpression" id="_DE6104OJEeO3-tSenbhqWg" evaluatesToTypeRef="java:java.lang.Boolean" language="http://www.w3.org/1999/XPath"></model:conditionExpression>
+    </model:sequenceFlow>
   </model:process>
   <model:process id="_iVi_8INkEeO3-tSenbhqWg" name="Client">
-    <model:ioSpecification id="_zqcTk4OCEeO3-tSenbhqWg">
-      <model:inputSet id="_zqcTlIOCEeO3-tSenbhqWg"/>
-      <model:outputSet id="_zqcTlYOCEeO3-tSenbhqWg"/>
+    <model:ioSpecification id="_DE611oOJEeO3-tSenbhqWg">
+      <model:inputSet id="_DE6114OJEeO3-tSenbhqWg"/>
+      <model:outputSet id="_DE612IOJEeO3-tSenbhqWg"/>
     </model:ioSpecification>
   </model:process>
   <model:process id="_iV1T0INkEeO3-tSenbhqWg" name="TravelParadise">
-    <model:ioSpecification id="_zqcTmIOCEeO3-tSenbhqWg">
-      <model:inputSet id="_zqcTmYOCEeO3-tSenbhqWg"/>
-      <model:outputSet id="_zqcTmoOCEeO3-tSenbhqWg"/>
+    <model:ioSpecification id="_DE6124OJEeO3-tSenbhqWg">
+      <model:inputSet id="_DE613IOJEeO3-tSenbhqWg"/>
+      <model:outputSet id="_DE613YOJEeO3-tSenbhqWg"/>
     </model:ioSpecification>
     <model:laneSet id="TravelParadise_laneSet">
       <model:lane id="_iWL5IINkEeO3-tSenbhqWg" name="Regulation">
@@ -48,55 +52,63 @@
     <di:BPMNPlane id="plane__iKMEgYNkEeO3-tSenbhqWg" bpmnElement="_iKMEgYNkEeO3-tSenbhqWg">
       <di:BPMNShape id="_iSoO0INkEeO3-tSenbhqWg" bpmnElement="_iSiIMINkEeO3-tSenbhqWg" isHorizontal="true">
         <dc:Bounds height="315.0" width="1186.0" x="30.0" y="30.0"/>
-        <di:BPMNLabel id="_zqbsgoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE6OwoOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_SVbwUIN6EeO3-tSenbhqWg" bpmnElement="_SVYtAIN6EeO3-tSenbhqWg">
         <dc:Bounds height="60.0" width="120.0" x="672.0" y="98.0"/>
-        <di:BPMNLabel id="_zqbshoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE610IOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_Vn18QIN6EeO3-tSenbhqWg" bpmnElement="_Vn0HEIN6EeO3-tSenbhqWg">
-        <dc:Bounds height="60.0" width="120.0" x="672.0" y="182.0"/>
-        <di:BPMNLabel id="_zqcTkIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+      <di:BPMNShape id="_TPmmoIOHEeO3-tSenbhqWg" bpmnElement="_TPiVMIOHEeO3-tSenbhqWg">
+        <dc:Bounds height="50.0" width="100.0" x="238.0" y="103.0"/>
+        <di:BPMNLabel id="_DE610YOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
+      <di:BPMNShape id="_ukX_YIOHEeO3-tSenbhqWg" bpmnElement="_ukWxQIOHEeO3-tSenbhqWg">
+        <dc:Bounds height="50.0" width="100.0" x="406.0" y="103.0"/>
+        <di:BPMNLabel id="_DE610oOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
+      </di:BPMNShape>
+      <di:BPMNEdge id="_vP1-QIOHEeO3-tSenbhqWg" bpmnElement="_vP0wIIOHEeO3-tSenbhqWg">
+        <di_1:waypoint x="338.0" y="132.0"/>
+        <di_1:waypoint x="406.0" y="132.0"/>
+      </di:BPMNEdge>
       <di:BPMNShape id="_iVlcMINkEeO3-tSenbhqWg" bpmnElement="_iVi_8INkEeO3-tSenbhqWg" isHorizontal="true">
         <dc:Bounds height="315.0" width="1186.0" x="30.0" y="365.0"/>
-        <di:BPMNLabel id="_zqcTkoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE611YOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_iV3wEINkEeO3-tSenbhqWg" bpmnElement="_iV1T0INkEeO3-tSenbhqWg" isHorizontal="true">
         <dc:Bounds height="700.0" width="1186.0" x="30.0" y="700.0"/>
-        <di:BPMNLabel id="_zqcTl4OCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE612oOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_jVSlsINkEeO3-tSenbhqWg" bpmnElement="_iWL5IINkEeO3-tSenbhqWg" isHorizontal="true">
         <dc:Bounds height="250.0" width="1168.0" x="48.0" y="700.0"/>
-        <di:BPMNLabel id="_zqcTm4OCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE613oOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_iW9VMINkEeO3-tSenbhqWg" bpmnElement="_iWyWEINkEeO3-tSenbhqWg">
         <dc:Bounds height="50.0" width="100.0" x="228.0" y="765.0"/>
-        <di:BPMNLabel id="_zqcTnIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE6134OJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_iaiNoINkEeO3-tSenbhqWg" bpmnElement="_iaejQINkEeO3-tSenbhqWg">
         <dc:Bounds height="30.0" width="30.0" x="128.0" y="775.0"/>
-        <di:BPMNLabel id="_zqcTnYOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE614IOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_jVSluINkEeO3-tSenbhqWg" bpmnElement="_ibFAMINkEeO3-tSenbhqWg" isHorizontal="true">
         <dc:Bounds height="250.0" width="1168.0" x="48.0" y="950.0"/>
-        <di:BPMNLabel id="_zqcTnoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE614YOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_ibblgINkEeO3-tSenbhqWg" bpmnElement="_ibZwUINkEeO3-tSenbhqWg">
         <dc:Bounds height="30.0" width="30.0" x="122.0" y="1065.0"/>
-        <di:BPMNLabel id="_zqcTn4OCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE7c4IOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_ibsrQINkEeO3-tSenbhqWg" bpmnElement="_ibqPAINkEeO3-tSenbhqWg">
         <dc:Bounds height="50.0" width="100.0" x="220.0" y="1065.0"/>
-        <di:BPMNLabel id="_zqcToIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE7c4YOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_jVSlwINkEeO3-tSenbhqWg" bpmnElement="_ib7UwINkEeO3-tSenbhqWg" isHorizontal="true">
         <dc:Bounds height="100.0" width="1208.0" x="48.0" y="1200.0"/>
-        <di:BPMNLabel id="_zqcToYOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE7c4oOJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNShape id="_jVSlyINkEeO3-tSenbhqWg" bpmnElement="_icNBkINkEeO3-tSenbhqWg" isHorizontal="true">
         <dc:Bounds height="100.0" width="1208.0" x="48.0" y="1300.0"/>
-        <di:BPMNLabel id="_zqc6oIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+        <di:BPMNLabel id="_DE7c44OJEeO3-tSenbhqWg" labelStyle="_DE6OwYOJEeO3-tSenbhqWg"/>
       </di:BPMNShape>
       <di:BPMNEdge id="_idDWIINkEeO3-tSenbhqWg" bpmnElement="_idA54INkEeO3-tSenbhqWg">
         <di_1:waypoint x="158.0" y="790.0"/>
@@ -107,7 +119,7 @@
         <di_1:waypoint x="220.0" y="1085.0"/>
       </di:BPMNEdge>
     </di:BPMNPlane>
-    <di:BPMNLabelStyle id="_zqbsgYOCEeO3-tSenbhqWg">
+    <di:BPMNLabelStyle id="_DE6OwYOJEeO3-tSenbhqWg">
       <dc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name="Lucida Grande" size="9.0"/>
     </di:BPMNLabelStyle>
   </di:BPMNDiagram>
