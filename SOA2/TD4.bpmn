@@ -1,102 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bonitaConnector="http://www.bonitasoft.org/studio/connector/definition/6.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di_1="http://www.omg.org/spec/DD/20100524/DI" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:model="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="BonitaSoft" exporterVersion="6.1.0" expressionLanguage="http://groovy.codehaus.org/" targetNamespace="http://bonitasoft.com/_bjUlAILyEeOboMQ5HErzCw">
-  <model:collaboration id="_bjUlAILyEeOboMQ5HErzCw">
-    <model:participant id="_NWRbkINiEeOenY7ST-VbqA" name="Supplier" processRef="_9qb00INhEeOenY7ST-VbqA"/>
-    <model:participant id="_NWZ-cINiEeOenY7ST-VbqA" name="Client" processRef="_3G_V8INhEeOenY7ST-VbqA"/>
-    <model:participant id="_NWalhINiEeOenY7ST-VbqA" name="TravelParadise" processRef="_blM0UILyEeOboMQ5HErzCw"/>
+<model:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bonitaConnector="http://www.bonitasoft.org/studio/connector/definition/6.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di_1="http://www.omg.org/spec/DD/20100524/DI" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:model="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="schemaLocation http://www.omg.org/spec/BPMN/20100524/MODEL schemas/BPMN20.xsd" exporter="BonitaSoft" exporterVersion="6.1.0" expressionLanguage="http://groovy.codehaus.org/" targetNamespace="http://bonitasoft.com/_iKMEgYNkEeO3-tSenbhqWg">
+  <model:collaboration id="_iKMEgYNkEeO3-tSenbhqWg">
+    <model:participant id="_zqbsgIOCEeO3-tSenbhqWg" name="Supplier" processRef="_iSiIMINkEeO3-tSenbhqWg"/>
+    <model:participant id="_zqcTkYOCEeO3-tSenbhqWg" name="Client" processRef="_iVi_8INkEeO3-tSenbhqWg"/>
+    <model:participant id="_zqcTloOCEeO3-tSenbhqWg" name="TravelParadise" processRef="_iV1T0INkEeO3-tSenbhqWg"/>
   </model:collaboration>
-  <model:process id="_9qb00INhEeOenY7ST-VbqA" name="Supplier">
-    <model:ioSpecification id="_NWYJQINiEeOenY7ST-VbqA">
-      <model:inputSet id="_NWYwUINiEeOenY7ST-VbqA"/>
-      <model:outputSet id="_NWZXYINiEeOenY7ST-VbqA"/>
+  <model:process id="_iSiIMINkEeO3-tSenbhqWg" name="Supplier">
+    <model:ioSpecification id="_zqbsg4OCEeO3-tSenbhqWg">
+      <model:inputSet id="_zqbshIOCEeO3-tSenbhqWg"/>
+      <model:outputSet id="_zqbshYOCEeO3-tSenbhqWg"/>
+    </model:ioSpecification>
+    <model:receiveTask id="_SVYtAIN6EeO3-tSenbhqWg" name="receive valid reservation"/>
+    <model:receiveTask id="_Vn0HEIN6EeO3-tSenbhqWg" name="receive invalid reservation"/>
+  </model:process>
+  <model:process id="_iVi_8INkEeO3-tSenbhqWg" name="Client">
+    <model:ioSpecification id="_zqcTk4OCEeO3-tSenbhqWg">
+      <model:inputSet id="_zqcTlIOCEeO3-tSenbhqWg"/>
+      <model:outputSet id="_zqcTlYOCEeO3-tSenbhqWg"/>
     </model:ioSpecification>
   </model:process>
-  <model:process id="_3G_V8INhEeOenY7ST-VbqA" name="Client">
-    <model:ioSpecification id="_NWalgYNiEeOenY7ST-VbqA">
-      <model:inputSet id="_NWalgoNiEeOenY7ST-VbqA"/>
-      <model:outputSet id="_NWalg4NiEeOenY7ST-VbqA"/>
-    </model:ioSpecification>
-  </model:process>
-  <model:process id="_blM0UILyEeOboMQ5HErzCw" name="TravelParadise">
-    <model:ioSpecification id="_NWalhoNiEeOenY7ST-VbqA">
-      <model:inputSet id="_NWalh4NiEeOenY7ST-VbqA"/>
-      <model:outputSet id="_NWaliINiEeOenY7ST-VbqA"/>
+  <model:process id="_iV1T0INkEeO3-tSenbhqWg" name="TravelParadise">
+    <model:ioSpecification id="_zqcTmIOCEeO3-tSenbhqWg">
+      <model:inputSet id="_zqcTmYOCEeO3-tSenbhqWg"/>
+      <model:outputSet id="_zqcTmoOCEeO3-tSenbhqWg"/>
     </model:ioSpecification>
     <model:laneSet id="TravelParadise_laneSet">
-      <model:lane id="_blfIMILyEeOboMQ5HErzCw" name="Regulation">
-        <model:flowNodeRef>_bl7NEILyEeOboMQ5HErzCw</model:flowNodeRef>
-        <model:flowNodeRef>_bmf00ILyEeOboMQ5HErzCw</model:flowNodeRef>
+      <model:lane id="_iWL5IINkEeO3-tSenbhqWg" name="Regulation">
+        <model:flowNodeRef>_iWyWEINkEeO3-tSenbhqWg</model:flowNodeRef>
+        <model:flowNodeRef>_iaejQINkEeO3-tSenbhqWg</model:flowNodeRef>
       </model:lane>
-      <model:lane id="_nSsWwINhEeOenY7ST-VbqA" name="Finance">
-        <model:flowNodeRef>_z6EG8INhEeOenY7ST-VbqA</model:flowNodeRef>
-        <model:flowNodeRef>_z6HKQINhEeOenY7ST-VbqA</model:flowNodeRef>
+      <model:lane id="_ibFAMINkEeO3-tSenbhqWg" name="Finance">
+        <model:flowNodeRef>_ibZwUINkEeO3-tSenbhqWg</model:flowNodeRef>
+        <model:flowNodeRef>_ibqPAINkEeO3-tSenbhqWg</model:flowNodeRef>
       </model:lane>
-      <model:lane id="_ryT8sINhEeOenY7ST-VbqA" name="R&amp;D"/>
-      <model:lane id="_tKyykINhEeOenY7ST-VbqA" name="Sale &amp; Marketing"/>
+      <model:lane id="_ib7UwINkEeO3-tSenbhqWg" name="R&amp;D"/>
+      <model:lane id="_icNBkINkEeO3-tSenbhqWg" name="Sale &amp; Marketing"/>
     </model:laneSet>
-    <model:userTask id="_bl7NEILyEeOboMQ5HErzCw" name="Step1"/>
-    <model:startEvent id="_bmf00ILyEeOboMQ5HErzCw" name="Start1"/>
-    <model:startEvent id="_z6EG8INhEeOenY7ST-VbqA" name="start"/>
-    <model:userTask id="_z6HKQINhEeOenY7ST-VbqA" name="step"/>
-    <model:sequenceFlow id="_bmwTgILyEeOboMQ5HErzCw" name="" sourceRef="_bmf00ILyEeOboMQ5HErzCw" targetRef="_bl7NEILyEeOboMQ5HErzCw"/>
-    <model:sequenceFlow id="_z6IYYINhEeOenY7ST-VbqA" name="" sourceRef="_z6EG8INhEeOenY7ST-VbqA" targetRef="_z6HKQINhEeOenY7ST-VbqA"/>
+    <model:userTask id="_iWyWEINkEeO3-tSenbhqWg" name="Step1"/>
+    <model:startEvent id="_iaejQINkEeO3-tSenbhqWg" name="Start1"/>
+    <model:startEvent id="_ibZwUINkEeO3-tSenbhqWg" name="start"/>
+    <model:userTask id="_ibqPAINkEeO3-tSenbhqWg" name="step"/>
+    <model:sequenceFlow id="_idA54INkEeO3-tSenbhqWg" name="" sourceRef="_iaejQINkEeO3-tSenbhqWg" targetRef="_iWyWEINkEeO3-tSenbhqWg"/>
+    <model:sequenceFlow id="_ieNzwINkEeO3-tSenbhqWg" name="" sourceRef="_ibZwUINkEeO3-tSenbhqWg" targetRef="_ibqPAINkEeO3-tSenbhqWg"/>
   </model:process>
+  <model:signal id="_LIvLAIN4EeO3-tSenbhqWg" name="stock alert"/>
   <di:BPMNDiagram name="TD4">
-    <di:BPMNPlane id="plane__bjUlAILyEeOboMQ5HErzCw" bpmnElement="_bjUlAILyEeOboMQ5HErzCw">
-      <di:BPMNShape id="_9sj7wINhEeOenY7ST-VbqA" bpmnElement="_9qb00INhEeOenY7ST-VbqA" isHorizontal="true">
-        <dc:Bounds height="250.0" width="1126.0" x="30.0" y="30.0"/>
-        <di:BPMNLabel id="_NWVtAYNiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+    <di:BPMNPlane id="plane__iKMEgYNkEeO3-tSenbhqWg" bpmnElement="_iKMEgYNkEeO3-tSenbhqWg">
+      <di:BPMNShape id="_iSoO0INkEeO3-tSenbhqWg" bpmnElement="_iSiIMINkEeO3-tSenbhqWg" isHorizontal="true">
+        <dc:Bounds height="315.0" width="1186.0" x="30.0" y="30.0"/>
+        <di:BPMNLabel id="_zqbsgoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_3JScAINhEeOenY7ST-VbqA" bpmnElement="_3G_V8INhEeOenY7ST-VbqA" isHorizontal="true">
-        <dc:Bounds height="250.0" width="1126.0" x="30.0" y="300.0"/>
-        <di:BPMNLabel id="_NWalgINiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_SVbwUIN6EeO3-tSenbhqWg" bpmnElement="_SVYtAIN6EeO3-tSenbhqWg">
+        <dc:Bounds height="60.0" width="120.0" x="672.0" y="98.0"/>
+        <di:BPMNLabel id="_zqbshoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_blOpgILyEeOboMQ5HErzCw" bpmnElement="_blM0UILyEeOboMQ5HErzCw" isHorizontal="true">
-        <dc:Bounds height="700.0" width="1161.0" x="30.0" y="570.0"/>
-        <di:BPMNLabel id="_NWalhYNiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_Vn18QIN6EeO3-tSenbhqWg" bpmnElement="_Vn0HEIN6EeO3-tSenbhqWg">
+        <dc:Bounds height="60.0" width="120.0" x="672.0" y="182.0"/>
+        <di:BPMNLabel id="_zqcTkIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_brS1SoLyEeOboMQ5HErzCw" bpmnElement="_blfIMILyEeOboMQ5HErzCw" isHorizontal="true">
-        <dc:Bounds height="250.0" width="1173.0" x="48.0" y="570.0"/>
-        <di:BPMNLabel id="_NWcasINiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_iVlcMINkEeO3-tSenbhqWg" bpmnElement="_iVi_8INkEeO3-tSenbhqWg" isHorizontal="true">
+        <dc:Bounds height="315.0" width="1186.0" x="30.0" y="365.0"/>
+        <di:BPMNLabel id="_zqcTkoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_bl9CQILyEeOboMQ5HErzCw" bpmnElement="_bl7NEILyEeOboMQ5HErzCw">
-        <dc:Bounds height="50.0" width="100.0" x="218.0" y="630.0"/>
-        <di:BPMNLabel id="_NW-mMINiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_iV3wEINkEeO3-tSenbhqWg" bpmnElement="_iV1T0INkEeO3-tSenbhqWg" isHorizontal="true">
+        <dc:Bounds height="700.0" width="1186.0" x="30.0" y="700.0"/>
+        <di:BPMNLabel id="_zqcTl4OCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_bmhC8ILyEeOboMQ5HErzCw" bpmnElement="_bmf00ILyEeOboMQ5HErzCw">
-        <dc:Bounds height="30.0" width="30.0" x="118.0" y="640.0"/>
-        <di:BPMNLabel id="_NXBCcINiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_jVSlsINkEeO3-tSenbhqWg" bpmnElement="_iWL5IINkEeO3-tSenbhqWg" isHorizontal="true">
+        <dc:Bounds height="250.0" width="1168.0" x="48.0" y="700.0"/>
+        <di:BPMNLabel id="_zqcTm4OCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_nT_XQINhEeOenY7ST-VbqA" bpmnElement="_nSsWwINhEeOenY7ST-VbqA" isHorizontal="true">
-        <dc:Bounds height="250.0" width="1173.0" x="48.0" y="820.0"/>
-        <di:BPMNLabel id="_NXBCcYNiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_iW9VMINkEeO3-tSenbhqWg" bpmnElement="_iWyWEINkEeO3-tSenbhqWg">
+        <dc:Bounds height="50.0" width="100.0" x="228.0" y="765.0"/>
+        <di:BPMNLabel id="_zqcTnIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_z6GjMINhEeOenY7ST-VbqA" bpmnElement="_z6EG8INhEeOenY7ST-VbqA">
-        <dc:Bounds height="30.0" width="30.0" x="112.0" y="930.0"/>
-        <di:BPMNLabel id="_NXBCcoNiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_iaiNoINkEeO3-tSenbhqWg" bpmnElement="_iaejQINkEeO3-tSenbhqWg">
+        <dc:Bounds height="30.0" width="30.0" x="128.0" y="775.0"/>
+        <di:BPMNLabel id="_zqcTnYOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_z6HxVYNhEeOenY7ST-VbqA" bpmnElement="_z6HKQINhEeOenY7ST-VbqA">
-        <dc:Bounds height="50.0" width="100.0" x="210.0" y="930.0"/>
-        <di:BPMNLabel id="_NXBCc4NiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_jVSluINkEeO3-tSenbhqWg" bpmnElement="_ibFAMINkEeO3-tSenbhqWg" isHorizontal="true">
+        <dc:Bounds height="250.0" width="1168.0" x="48.0" y="950.0"/>
+        <di:BPMNLabel id="_zqcTnoOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_ryVK0INhEeOenY7ST-VbqA" bpmnElement="_ryT8sINhEeOenY7ST-VbqA" isHorizontal="true">
-        <dc:Bounds height="100.0" width="1173.0" x="48.0" y="1070.0"/>
-        <di:BPMNLabel id="_NXBCdINiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_ibblgINkEeO3-tSenbhqWg" bpmnElement="_ibZwUINkEeO3-tSenbhqWg">
+        <dc:Bounds height="30.0" width="30.0" x="122.0" y="1065.0"/>
+        <di:BPMNLabel id="_zqcTn4OCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNShape id="_tK5gQINhEeOenY7ST-VbqA" bpmnElement="_tKyykINhEeOenY7ST-VbqA" isHorizontal="true">
-        <dc:Bounds height="100.0" width="1173.0" x="48.0" y="1170.0"/>
-        <di:BPMNLabel id="_NXBCdYNiEeOenY7ST-VbqA" labelStyle="_NWVtAINiEeOenY7ST-VbqA"/>
+      <di:BPMNShape id="_ibsrQINkEeO3-tSenbhqWg" bpmnElement="_ibqPAINkEeO3-tSenbhqWg">
+        <dc:Bounds height="50.0" width="100.0" x="220.0" y="1065.0"/>
+        <di:BPMNLabel id="_zqcToIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
       </di:BPMNShape>
-      <di:BPMNEdge id="_bmxhoILyEeOboMQ5HErzCw" bpmnElement="_bmwTgILyEeOboMQ5HErzCw">
-        <di_1:waypoint x="148.0" y="655.0"/>
-        <di_1:waypoint x="218.0" y="655.0"/>
+      <di:BPMNShape id="_jVSlwINkEeO3-tSenbhqWg" bpmnElement="_ib7UwINkEeO3-tSenbhqWg" isHorizontal="true">
+        <dc:Bounds height="100.0" width="1208.0" x="48.0" y="1200.0"/>
+        <di:BPMNLabel id="_zqcToYOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+      </di:BPMNShape>
+      <di:BPMNShape id="_jVSlyINkEeO3-tSenbhqWg" bpmnElement="_icNBkINkEeO3-tSenbhqWg" isHorizontal="true">
+        <dc:Bounds height="100.0" width="1208.0" x="48.0" y="1300.0"/>
+        <di:BPMNLabel id="_zqc6oIOCEeO3-tSenbhqWg" labelStyle="_zqbsgYOCEeO3-tSenbhqWg"/>
+      </di:BPMNShape>
+      <di:BPMNEdge id="_idDWIINkEeO3-tSenbhqWg" bpmnElement="_idA54INkEeO3-tSenbhqWg">
+        <di_1:waypoint x="158.0" y="790.0"/>
+        <di_1:waypoint x="228.0" y="790.0"/>
       </di:BPMNEdge>
-      <di:BPMNEdge id="_z6I_cINhEeOenY7ST-VbqA" bpmnElement="_z6IYYINhEeOenY7ST-VbqA">
-        <di_1:waypoint x="140.0" y="950.0"/>
-        <di_1:waypoint x="210.0" y="950.0"/>
+      <di:BPMNEdge id="_iePo8INkEeO3-tSenbhqWg" bpmnElement="_ieNzwINkEeO3-tSenbhqWg">
+        <di_1:waypoint x="150.0" y="1085.0"/>
+        <di_1:waypoint x="220.0" y="1085.0"/>
       </di:BPMNEdge>
     </di:BPMNPlane>
-    <di:BPMNLabelStyle id="_NWVtAINiEeOenY7ST-VbqA">
+    <di:BPMNLabelStyle id="_zqbsgYOCEeO3-tSenbhqWg">
       <dc:Font isBold="false" isItalic="false" isStrikeThrough="false" isUnderline="false" name="Lucida Grande" size="9.0"/>
     </di:BPMNLabelStyle>
   </di:BPMNDiagram>
